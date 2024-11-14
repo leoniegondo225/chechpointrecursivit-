@@ -1,0 +1,34 @@
+// Demander la température actuelle à l'utilisateur
+let temperature = prompt("Entrez la température actuelle (en °C) :");
+
+// Convertir la température en nombre entier
+temperature = parseInt(temperature);
+
+// Demander si il pleut
+let isRaining = prompt("Est-ce qu'il pleut ? (oui/non)").toLowerCase();
+
+// Vérifier si l'entrée est correcte
+if (isNaN(temperature)) {
+    console.log("Veuillez entrer une température valide.");
+} else {
+    // Conseiller en fonction de la température et du temps
+    if (isRaining === "oui") {
+        if (temperature < 10) {
+            console.log("Il fait froid et il pleut. Portez un manteau chaud, un parapluie et des bottes.");
+        } else if (temperature >= 10 && temperature <= 20) {
+            console.log("Il fait frais et il pleut. Portez un imperméable et prenez un parapluie.");
+        } else {
+            console.log("Il fait chaud mais il pleut. Portez des vêtements légers et un imperméable.");
+        }
+    } else if (isRaining === "non") {
+        if (temperature < 10) {
+            console.log("Il fait froid. Portez un manteau chaud et une écharpe.");
+        } else if (temperature >= 10 && temperature <= 20) {
+            console.log("Il fait frais. Portez un pull ou une veste légère.");
+        } else {
+            console.log("Il fait chaud. Portez des vêtements légers.");
+        }
+    } else {
+        console.log("Veuillez répondre par 'oui' ou 'non' pour la question sur la pluie.");
+    }
+}

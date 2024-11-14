@@ -1,0 +1,20 @@
+// Demander à l'utilisateur son âge
+let age = prompt("Entrez votre âge:");
+
+// Convertir l'entrée en un nombre entier
+age = parseInt(age);
+
+// Utilisation du switch pour déterminer le prix du billet
+switch (true) {
+    case (age <= 12):
+        console.log("Le prix du billet est de 10 $ pour les enfants.");
+        break;
+    case (age >= 13 && age <= 17):
+        console.log("Le prix du billet est de 15 $ pour les adolescents.");
+        break;
+    case (age >= 18):
+        console.log("Le prix du billet est de 20 $ pour les adultes.");
+        break;
+    default:
+        console.log("Âge invalide. Veuillez entrer un nombre entier.");
+}

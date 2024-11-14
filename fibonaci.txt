@@ -1,0 +1,12 @@
+function fibonacci(n) {
+    // Condition de base : F(0) = 0 et F(1) = 1
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+
+    // Appel récursif pour F(n) = F(n-1) + F(n-2)
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// Exemple d'utilisation
+let n = 6;
+console.log(`Le ${n}ème nombre de Fibonacci est : ${fibonacci(n)}`);
